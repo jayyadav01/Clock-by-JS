@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="clockcontainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+
+    <script>
+        setInterval(function ()
+        {
+            d = new Date();
+            let hours = d.getHours();
+            let minutes = d.getMinutes();
+            let seconds = d.getSeconds();
+            
+            hrotation = hours*30 + minutes/2;
+            mrotation = minutes*6;
+            srotation = seconds*6;
+
+            hour.style.transform = `rotate(${hrotation}deg)`;
+            minute.style.transform = `rotate(${mrotation}deg)`;
+            second.style.transform = `rotate(${srotation}deg)`;
+
+        },1000)
+        </script>
+</body>
+</html>
